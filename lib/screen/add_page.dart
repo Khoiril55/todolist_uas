@@ -72,12 +72,6 @@ class _addcatatanState extends State<addcatatan> {
     final id = todo['id'];
     final judul = judulController.text;
     final deskripsi = deskripsiController.text;
-
-     if (judul.isEmpty || deskripsi.isEmpty) {
-      showErrorMessage("Judul dan Deskripsi harus diisi");
-      return;
-    }
-    
     final body = {
       "judul": judul,
       "deskripsi": deskripsi,
@@ -87,6 +81,11 @@ class _addcatatanState extends State<addcatatan> {
       final response = await http.put(Uri.parse(url),
           body: json.encode(body),
           headers: {'Content-Type': 'application/json'});
+
+      if (judul.isEmpty || deskripsi.isEmpty) {
+        showErrorMessage("Judul dan Deskripsi harus diisi");
+        return;
+      }
 
       if (response.statusCode == 200) {
         judulController.text = '';
