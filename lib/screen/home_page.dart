@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Catatan Najwa'),
+        title: Text('Catatan UAS'),
       ),
 
       body: Visibility(
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
       
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => postData(context),
-        label: Text('Tambahkan Catatan'),
+        label: Text('Add Catatan'),
       ),
     );
   }
