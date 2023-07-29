@@ -57,7 +57,7 @@ class _addcatatanState extends State<addcatatan> {
               padding: const EdgeInsets.all(16.0),
               child: Text(isEdit ? 'Update' : 'Tambahkan'),
             ),
-          ),
+          ),                       
         ],
       ),
     );
